@@ -1,6 +1,5 @@
 "
 " == VIM configuration - Arnaud ==
-"
 set nocompatible
 set encoding=utf-8
 set noswf
@@ -21,6 +20,10 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap jj <ESC>
+
+map <leader>v :vsplit ~/.vim/vimrc<CR>
+map <leader>r :source ~/.vim/vimrc<CR>
+map <leader>( :RainbowParenthesesToggleAll<CR>
 
 " -- GUI Display modifications
 
@@ -111,6 +114,8 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'rstacruz/sparkup'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'othree/html5.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -121,4 +126,10 @@ filetype plugin indent on
 let g:UltiSnipsExpandTrigger="<c-x>"
 let g:UltiSnipsListSnippets="<c-l>"
 let g:UltiSnipsEditSplit="vertical"
+
+
+" -- Rainbow parentheses
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
