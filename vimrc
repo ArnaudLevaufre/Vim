@@ -7,6 +7,7 @@ set undofile
 set undodir=/home/arnaud/.vim/undodir
 set timeoutlen=1000
 set ttimeoutlen=50
+set lazyredraw
 
 " -- Shortcuts and mapping
 
@@ -24,6 +25,7 @@ inoremap jj <ESC>
 map <leader>v :vsplit ~/.vim/vimrc<CR>
 map <leader>r :source ~/.vim/vimrc<CR>
 map <leader>( :RainbowParenthesesToggleAll<CR>
+map <leader>s :UltiSnipsEdit<CR>
 
 " -- GUI Display modifications
 
@@ -32,6 +34,7 @@ set relativenumber
 set number
 set showcmd
 set wildmenu
+set wildignore=*.o,*.pyc
 set scrolloff=5
 set cursorline
 set laststatus=2
@@ -50,6 +53,7 @@ set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set smartindent
 set nowrap
 set expandtab
 set smarttab
@@ -116,6 +120,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'othree/html5.vim'
+Plugin 'klen/python-mode'
 
 call vundle#end()
 filetype plugin indent on
@@ -132,4 +137,12 @@ let g:UltiSnipsEditSplit="vertical"
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+
+" -- python-mode
+let g:pymode_run_bind = "R"
+let g:pymode_lint_on_fly = 1
+let g:pymode_virtualenv = 0
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
 
