@@ -123,6 +123,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'othree/html5.vim'
 Plugin 'klen/python-mode'
+Plugin 'vim-scripts/django.vim'
 
 call vundle#end()
 filetype plugin indent on
