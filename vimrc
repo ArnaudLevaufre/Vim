@@ -21,6 +21,8 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap jj <ESC>
+nnoremap <S-j> 5j
+nnoremap <S-k> 5k
 
 map <leader>v :vsplit ~/.vim/vimrc<CR>
 map <leader>r :source ~/.vim/vimrc<CR>
