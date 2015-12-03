@@ -148,4 +148,4 @@ let g:pymode_lint_on_fly = 1
 let g:pymode_virtualenv = 0
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
-
+let g:pymode_doc_bind = '<C-d>'
