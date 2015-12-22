@@ -21,12 +21,9 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap jj <ESC>
-nnoremap <S-j> 5j
-nnoremap <S-k> 5k
 
 map <leader>v :vsplit ~/.vim/vimrc<CR>
 map <leader>r :source ~/.vim/vimrc<CR>
-map <leader>( :RainbowParenthesesToggleAll<CR>
 map <leader>s :UltiSnipsEdit<CR>
 
 " -- GUI Display modifications
@@ -120,10 +117,11 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'rstacruz/sparkup'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'othree/html5.vim'
 Plugin 'klen/python-mode'
 Plugin 'vim-scripts/django.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'benmills/vimux'
 
 call vundle#end()
 filetype plugin indent on
@@ -136,11 +134,6 @@ let g:UltiSnipsListSnippets="<c-l>"
 let g:UltiSnipsEditSplit="vertical"
 
 
-" -- Rainbow parentheses
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 
 " -- python-mode
 let g:pymode_run_bind = "R"
@@ -149,3 +142,6 @@ let g:pymode_virtualenv = 0
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_doc_bind = '<C-d>'
+
+" -- vimux
+nnoremap <leader>c :call VimuxRunCommand("make")<CR>
