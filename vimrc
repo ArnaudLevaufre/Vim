@@ -24,7 +24,12 @@ inoremap jj <ESC>
 
 map <leader>v :vsplit ~/.vim/vimrc<CR>
 map <leader>r :source ~/.vim/vimrc<CR>
-map <leader>s :UltiSnipsEdit<CR>
+map <leader>u :UltiSnipsEdit<CR>
+
+map <leader>se :set spell spelllang=en_gb<CR>
+map <leader>sf :set spell spelllang=fr<CR>
+map <leader>sx :set nospell<CR>
+
 
 " -- GUI Display modifications
 
