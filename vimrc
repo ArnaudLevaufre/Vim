@@ -29,7 +29,8 @@ map <leader>u :UltiSnipsEdit<CR>
 map <leader>se :set spell spelllang=en_gb<CR>
 map <leader>sf :set spell spelllang=fr<CR>
 map <leader>sx :set nospell<CR>
-
+map <leader>cr :Coveragepy report<CR>
+map <leader>cs :Coveragepy session<CR>
 
 " -- GUI Display modifications
 
@@ -127,6 +128,7 @@ Plugin 'klen/python-mode'
 Plugin 'vim-scripts/django.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'benmills/vimux'
+Plugin 'alfredodeza/coveragepy.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -149,4 +151,4 @@ let g:pymode_rope_completion = 0
 let g:pymode_doc_bind = '<C-d>'
 
 " -- vimux
-nnoremap <leader>c :call VimuxRunCommand("make")<CR>
+nnoremap <leader>b :call VimuxRunCommand("make")<CR>
