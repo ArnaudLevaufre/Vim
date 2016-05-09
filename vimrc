@@ -32,6 +32,8 @@ map <leader>sx :set nospell<CR>
 map <leader>cr :Coveragepy report<CR>
 map <leader>cs :Coveragepy session<CR>
 
+map <leader>t :TlistToggle<CR>
+
 " -- GUI Display modifications
 
 set title
@@ -96,6 +98,7 @@ endif
 
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
+autocmd InsertLeave * :TlistUpdate
 
 autocmd BufEnter * set colorcolumn=0
 autocmd BufEnter * set tabstop=4
@@ -129,6 +132,7 @@ Plugin 'vim-scripts/django.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'benmills/vimux'
 Plugin 'alfredodeza/coveragepy.vim'
+Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -152,3 +156,13 @@ let g:pymode_doc_bind = '<C-d>'
 
 " -- vimux
 nnoremap <leader>b :call VimuxRunCommand("make")<CR>
+
+" -- taglist
+let Tlist_Use_Right_Window = 1
+let Tlist_Display_Prototype = 1
+let Tlist_Enable_Fold_Column = 0
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_WinWidth = 50
+
