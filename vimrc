@@ -133,6 +133,9 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'benmills/vimux'
 Plugin 'alfredodeza/coveragepy.vim'
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'rhysd/vim-grammarous'
 
 call vundle#end()
 filetype plugin indent on
@@ -165,4 +168,7 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 let Tlist_WinWidth = 50
+
+" -- Grammarous
+let g:grammarous#use_vim_spelllang = 1
 
