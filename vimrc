@@ -85,15 +85,6 @@ set foldcolumn=0
 " -- Color scheme
 syntax enable
 
-if &term=~'linux'
-	set t_Co=16
-	colorscheme ttycustom
-else
-	set t_Co=256
-	colorscheme custom
-endif
-
-
 " -- Autocmd
 
 autocmd InsertEnter * set norelativenumber
@@ -136,6 +127,9 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'rhysd/vim-grammarous'
+Plugin 'dikiaap/minimalist'
+Plugin 'joshdick/onedark.vim'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 filetype plugin indent on
@@ -172,3 +166,6 @@ let Tlist_WinWidth = 50
 " -- Grammarous
 let g:grammarous#use_vim_spelllang = 1
 
+"set termguicolors
+let g:onedark_termcolors=16
+colorscheme onedark
