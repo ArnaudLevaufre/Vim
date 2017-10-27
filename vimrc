@@ -128,13 +128,6 @@ call vundle#end()
 filetype plugin indent on
 
 
-" -- Ultisnips configuration
-
-let g:UltiSnipsExpandTrigger="<c-x>"
-let g:UltiSnipsListSnippets="<c-l>"
-let g:UltiSnipsEditSplit="vertical"
-
-
 
 " -- python-mode
 let g:pymode_run_bind = "R"
@@ -143,9 +136,6 @@ let g:pymode_virtualenv = 0
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_doc_bind = '<C-d>'
-
-" -- vimux
-nnoremap <leader>b :call VimuxRunCommand("make")<CR>
 
 " -- taglist
 let Tlist_Use_Right_Window = 1
