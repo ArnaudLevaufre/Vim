@@ -110,24 +110,23 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'alfredodeza/coveragepy.vim'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'itchyny/lightline.vim'
 Plugin 'joshdick/onedark.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'klen/python-mode'
+Plugin 'rhysd/vim-grammarous'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-fugitive'
-Plugin 'itchyny/lightline.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'klen/python-mode'
-Plugin 'alfredodeza/coveragepy.vim'
-Plugin 'vim-scripts/taglist.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rhysd/vim-grammarous'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/django.vim'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 call vundle#end()
 filetype plugin indent on
-
-
 
 " -- python-mode
 let g:pymode_run_bind = "R"
