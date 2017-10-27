@@ -8,6 +8,7 @@ set undodir=/home/arnaud/.vim/undodir
 set timeoutlen=1000
 set ttimeoutlen=50
 set lazyredraw
+set noshowmode
 
 " -- Shortcuts and mapping
 
@@ -110,26 +111,18 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'joshdick/onedark.vim'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'rstacruz/sparkup'
-Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'othree/html5.vim'
 Plugin 'klen/python-mode'
-Plugin 'vim-scripts/django.vim'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'benmills/vimux'
 Plugin 'alfredodeza/coveragepy.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'rust-lang/rust.vim'
 Plugin 'rhysd/vim-grammarous'
-Plugin 'dikiaap/minimalist'
-Plugin 'joshdick/onedark.vim'
-Plugin 'sheerun/vim-polyglot'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -169,3 +162,6 @@ let g:grammarous#use_vim_spelllang = 1
 "set termguicolors
 let g:onedark_termcolors=16
 colorscheme onedark
+
+" LightLine
+let g:lightline = {'colorscheme': 'onedark'}
