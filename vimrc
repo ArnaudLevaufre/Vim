@@ -45,7 +45,7 @@ map <leader>t :TlistToggle<CR>
 " -- GUI Display modifications
 
 set title
-set relativenumber
+" set relativenumber
 set number
 set showcmd
 set wildmenu
@@ -95,9 +95,9 @@ syntax enable
 
 " -- Autocmd
 
-autocmd InsertEnter * set norelativenumber
-autocmd InsertLeave * set relativenumber
-autocmd InsertLeave * :TlistUpdate
+" autocmd InsertEnter * set norelativenumber
+" autocmd InsertLeave * set relativenumber
+"autocmd InsertLeave * :TlistUpdate
 
 autocmd BufEnter * set colorcolumn=0
 autocmd BufEnter * set tabstop=4
