@@ -107,6 +107,12 @@ autocmd BufEnter *.py,*.cpp,*.hpp,*.h,*.c set colorcolumn=81
 
 autocmd BufEnter *.sass set tabstop=2
 autocmd BufEnter *.sass set shiftwidth=2
+autocmd BufEnter *.yaml set tabstop=2
+autocmd BufEnter *.yaml set shiftwidth=2
+autocmd BufEnter *.yml set tabstop=2
+autocmd BufEnter *.yml set shiftwidth=2
+autocmd BufEnter *.json set tabstop=2
+autocmd BufEnter *.json set shiftwidth=2
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 1
@@ -129,7 +135,9 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/django.vim'
-Plugin 'vim-scripts/taglist.vim'
+Plugin 'ambv/black'
+Plugin 'w0rp/ale'
+Plugin 'maksimr/vim-jsbeautify'
 Plugin 'VundleVim/Vundle.vim'
 
 call vundle#end()
