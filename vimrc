@@ -1,3 +1,10 @@
+
+"
+" Disable vim vue preprocessors
+let g:vue_disable_pre_processors=0
+
+"autocmd FileType vue syntax sync fromstart
+
 "
 " == VIM configuration - Arnaud ==
 set nocompatible
