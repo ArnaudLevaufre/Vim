@@ -16,6 +16,8 @@ set timeoutlen=1000
 set ttimeoutlen=50
 set lazyredraw
 set noshowmode
+set exrc
+set secure
 
 " -- Shortcuts and mapping
 
@@ -114,6 +116,14 @@ autocmd BufEnter *.yml set shiftwidth=2
 autocmd BufEnter *.json set tabstop=2
 autocmd BufEnter *.json set shiftwidth=2
 
+autocmd BufEnter /home/arnaud/projects/arctivities-web/*.css set tabstop=2
+autocmd BufEnter /home/arnaud/projects/arctivities-web/*.css set shiftwidth=2
+"autocmd BufEnter /home/arnaud/projects/arctivities-web/*.js set tabstop=2
+"autocmd BufEnter /home/arnaud/projects/arctivities-web/*.js set shiftwidth=2
+"autocmd BufEnter /home/arnaud/projects/arctivities-web/*.vue set tabstop=2
+"autocmd BufEnter /home/arnaud/projects/arctivities-web/*.vue set shiftwidth=2
+
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 1
 
@@ -138,27 +148,27 @@ Plugin 'vim-scripts/django.vim'
 Plugin 'ambv/black'
 Plugin 'w0rp/ale'
 Plugin 'maksimr/vim-jsbeautify'
+"Plugin 'posva/vim-vue'
+"Plugin 'vim-scripts/taglist.vim'
 Plugin 'VundleVim/Vundle.vim'
+
 
 call vundle#end()
 filetype plugin indent on
 
 " -- python-mode
-let g:pymode_run_bind = "R"
-let g:pymode_lint_on_fly = 1
-let g:pymode_virtualenv = 0
+let g:pymode = 0
 let g:pymode_rope = 0
-let g:pymode_rope_completion = 0
-let g:pymode_doc_bind = '<C-d>'
+
 
 " -- taglist
-let Tlist_Use_Right_Window = 1
-let Tlist_Display_Prototype = 1
-let Tlist_Enable_Fold_Column = 0
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
-let Tlist_WinWidth = 50
+"let Tlist_Use_Right_Window = 1
+"let Tlist_Display_Prototype = 1
+"let Tlist_Enable_Fold_Column = 0
+"let Tlist_Exit_OnlyWindow = 1
+"let Tlist_GainFocus_On_ToggleOpen = 1
+"let Tlist_Close_On_Select = 1
+"let Tlist_WinWidth = 50
 
 " -- Grammarous
 let g:grammarous#use_vim_spelllang = 1
