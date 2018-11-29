@@ -82,7 +82,7 @@ set autoread
 
 " -- Completion
 
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 
 " -- code folding
 
@@ -143,7 +143,17 @@ Plugin 'klen/python-mode'
 Plugin 'rhysd/vim-grammarous'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'ncm2/ncm2'
+Plugin 'ncm2/ncm2-bufword'
+Plugin 'ncm2/ncm2-path'
+Plugin 'ncm2/ncm2-jedi'
+Plugin 'mhartington/nvim-typescript'
+Plugin 'ncm2/ncm2-tern'
+Plugin 'ncm2/ncm2-racer'
+Plugin 'ncm2/ncm2-cssomni'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'vim-scripts/django.vim'
 Plugin 'ambv/black'
 Plugin 'w0rp/ale'
@@ -160,6 +170,13 @@ filetype plugin indent on
 let g:pymode = 0
 let g:pymode_rope = 0
 
+" -- ncm2 completion
+
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set shortmess+=c
+set completeopt=noinsert,menuone,noselect
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " -- taglist
 "let Tlist_Use_Right_Window = 1
