@@ -133,6 +133,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'neovim/python-client'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'alfredodeza/coveragepy.vim'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -158,6 +159,7 @@ Plugin 'vim-scripts/django.vim'
 Plugin 'ambv/black'
 Plugin 'w0rp/ale'
 Plugin 'maksimr/vim-jsbeautify'
+Plugin 'autozimu/LanguageClient-neovim'
 "Plugin 'posva/vim-vue'
 "Plugin 'vim-scripts/taglist.vim'
 Plugin 'VundleVim/Vundle.vim'
@@ -174,9 +176,25 @@ let g:pymode_rope = 0
 
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set shortmess+=c
-set completeopt=noinsert,menuone,noselect
+set completeopt=noinsert,menuone,noselect,preview
+set cot+=preview
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" -- Language client
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['/home/arnaud/.local/bin/pyls'],
+    \ }
+
+
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 " -- taglist
 "let Tlist_Use_Right_Window = 1
