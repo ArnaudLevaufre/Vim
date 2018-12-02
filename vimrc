@@ -162,10 +162,6 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 filetype plugin indent on
 
-" -- python-mode
-let g:pymode = 0
-let g:pymode_rope = 0
-
 " -- ncm2 completion
 
 autocmd BufEnter * call ncm2#enable_for_buffer()
