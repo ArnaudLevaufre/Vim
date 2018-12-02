@@ -127,45 +127,39 @@ autocmd BufEnter /home/arnaud/projects/arctivities-web/*.css set shiftwidth=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 1
 
-" -- vundle
+" -- Plugin managements
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'neovim/python-client'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'alfredodeza/coveragepy.vim'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'itchyny/lightline.vim'
-Plugin 'joshdick/onedark.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'klen/python-mode'
-Plugin 'rhysd/vim-grammarous'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'tpope/vim-fugitive'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'ncm2/ncm2'
-Plugin 'ncm2/ncm2-bufword'
-Plugin 'ncm2/ncm2-path'
-Plugin 'ncm2/ncm2-jedi'
-Plugin 'mhartington/nvim-typescript'
-Plugin 'ncm2/ncm2-tern'
-Plugin 'ncm2/ncm2-racer'
-Plugin 'ncm2/ncm2-cssomni'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'vim-scripts/django.vim'
-Plugin 'ambv/black'
-Plugin 'w0rp/ale'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'autozimu/LanguageClient-neovim'
-"Plugin 'posva/vim-vue'
-"Plugin 'vim-scripts/taglist.vim'
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin("~/.vim/bundle")
 
+Plug 'airblade/vim-gitgutter'
+Plug 'ambv/black'
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'itchyny/lightline.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'mhartington/nvim-typescript'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-cssomni'
+Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-racer'
+Plug 'ncm2/ncm2-tern'
+Plug 'neovim/python-client'
+Plug 'rhysd/vim-grammarous'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " -- python-mode
