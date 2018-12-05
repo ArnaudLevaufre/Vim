@@ -136,55 +136,22 @@ endif
 
 call plug#begin("~/.vim/bundle")
 
+Plug 'Valloric/YouCompleteMe', {'do': 'python install.py --clang-completer --rust-completer --ts-completer'}
 Plug 'airblade/vim-gitgutter'
 Plug 'ambv/black'
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'mhartington/nvim-typescript'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-cssomni'
-Plug 'ncm2/ncm2-jedi'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-racer'
-Plug 'ncm2/ncm2-tern'
-Plug 'neovim/python-client'
+Plug 'posva/vim-vue'
 Plug 'rhysd/vim-grammarous'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
+Plug 'w0rp/ale'
 
 call plug#end()
 filetype plugin indent on
-
-" -- ncm2 completion
-
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set shortmess+=c
-set completeopt=noinsert,menuone,noselect,preview
-set cot+=preview
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" -- Language client
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'python': ['/home/arnaud/.local/bin/pyls'],
-    \ }
-
-
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 " -- taglist
 "let Tlist_Use_Right_Window = 1
