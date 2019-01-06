@@ -165,8 +165,8 @@ filetype plugin indent on
 " -- Grammarous
 let g:grammarous#use_vim_spelllang = 1
 
-"set termguicolors
-let g:onedark_termcolors=16
+set termguicolors
+"let g:onedark_termcolors=16
 colorscheme onedark
 
 " LightLine
