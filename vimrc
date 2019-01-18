@@ -171,3 +171,6 @@ colorscheme onedark
 
 " LightLine
 let g:lightline = {'colorscheme': 'onedark'}
+
+" CtrlP
+let g:ctrlp_custom_ignore = {'dir': 'node_modules'}
