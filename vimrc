@@ -177,3 +177,4 @@ let g:lightline = {'colorscheme': 'onedark'}
 
 " CtrlP
 let g:ctrlp_custom_ignore = {'dir': 'node_modules'}
+let g:ctrlp_switch_buffer = 0
