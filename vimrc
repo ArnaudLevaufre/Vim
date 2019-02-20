@@ -166,7 +166,13 @@ filetype plugin indent on
 let g:grammarous#use_vim_spelllang = 1
 
 set termguicolors
-"let g:onedark_termcolors=16
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+else
+    let g:onedark_termcolors=16
+endif
 colorscheme onedark
 
 " LightLine
