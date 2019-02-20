@@ -120,6 +120,8 @@ autocmd BufEnter /home/arnaud/projects/arctivities-web/*.css set shiftwidth=2
 "autocmd BufEnter /home/arnaud/projects/arctivities-web/*.vue set tabstop=2
 "autocmd BufEnter /home/arnaud/projects/arctivities-web/*.vue set shiftwidth=2
 
+autocmd FileType vue syntax sync fromstart
+
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 1
