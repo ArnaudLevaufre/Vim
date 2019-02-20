@@ -163,7 +163,6 @@ filetype plugin indent on
 " -- Grammarous
 let g:grammarous#use_vim_spelllang = 1
 
-set termguicolors
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
