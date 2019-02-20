@@ -1,4 +1,3 @@
-
 "
 " Disable vim vue preprocessors
 let g:vue_disable_pre_processors=0
@@ -104,9 +103,7 @@ syntax enable
 autocmd BufEnter * set colorcolumn=0
 autocmd BufEnter * set tabstop=4
 autocmd BufEnter * set shiftwidth=4
-
 autocmd BufEnter *.py,*.cpp,*.hpp,*.h,*.c set colorcolumn=81
-
 autocmd BufEnter *.sass set tabstop=2
 autocmd BufEnter *.sass set shiftwidth=2
 autocmd BufEnter *.yaml set tabstop=2
