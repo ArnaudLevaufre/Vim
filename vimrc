@@ -180,3 +180,11 @@ let g:lightline = {'colorscheme': 'onedark'}
 
 " CtrlP
 let g:ctrlp_custom_ignore = {'dir': 'node_modules'}
+
+" Completion for rust with YouCompleteMe
+if executable("rustc")
+    let rust_src_dir = system("rustc --print sysroot") . "/lib/rustlib/src/rust/src"
+    if isdirectory(rust_src_dir)
+        let g:ycm_rust_src_path = ycm_rust_src_path
+    endif
+endif
