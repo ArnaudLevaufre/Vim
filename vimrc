@@ -138,3 +138,7 @@ else
     let g:onedark_termcolors=16
 endif
 colorscheme onedark
+"
+" Ensure vue files coloration work properly
+autocmd FileType vue syntax sync fromstart
+
