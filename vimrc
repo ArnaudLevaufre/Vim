@@ -120,7 +120,7 @@ let g:ctrlp_switch_buffer = 0
 if executable("rustc")
     let rust_src_dir = system("rustc --print sysroot") . "/lib/rustlib/src/rust/src"
     if isdirectory(rust_src_dir)
-        let g:ycm_rust_src_path = ycm_rust_src_path
+        let g:ycm_rust_src_path = rust_src_dir
     endif
 endif
 
