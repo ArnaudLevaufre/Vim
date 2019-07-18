@@ -22,7 +22,7 @@ set number
 set scrolloff=5
 set showcmd
 set title
-set wildignore=*.o,*.pyc
+set wildignore=*.o,*.pyc,*/node_modules/*
 set wildmenu
 
 " Search
