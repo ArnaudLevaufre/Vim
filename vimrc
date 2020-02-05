@@ -79,6 +79,8 @@ autocmd BufEnter *.yml set tabstop=2
 autocmd BufEnter *.yml set shiftwidth=2
 autocmd BufEnter *.json set tabstop=2
 autocmd BufEnter *.json set shiftwidth=2
+autocmd BufEnter *.pp set tabstop=2
+autocmd BufEnter *.pp set shiftwidth=2
 
 " Plugins management
 if empty(glob('~/.vim/autoload/plug.vim'))
