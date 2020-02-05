@@ -92,7 +92,6 @@ call plug#begin("~/.vim/bundle")
 
 Plug 'Valloric/YouCompleteMe', {'do': 'python install.py --clang-completer --rust-completer --ts-completer'}
 Plug 'airblade/vim-gitgutter'
-Plug 'ambv/black'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
