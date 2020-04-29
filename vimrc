@@ -143,3 +143,6 @@ colorscheme onedark
 " Ensure vue files coloration work properly
 autocmd FileType vue syntax sync fromstart
 
+" Netrw configuration
+let g:netrw_liststyle=3
+
